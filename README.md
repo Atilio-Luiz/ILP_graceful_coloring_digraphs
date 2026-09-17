@@ -94,35 +94,6 @@ graceful-coloring-digraphs/
 └── README.md
 ```
 
-## Formulation
-
-For every vertex \(v\), the model uses an integer variable \(x_v\) for its color.
-
-For every arc \(e=(u,v)\), an integer variable \(g_e\) represents its induced color. Binary variables are used to linearize the modular difference and to enforce distinct colors on adjacent arcs.
-
-The formulation includes the strengthening constraint
-
-\[
-k\geq\Delta(D)+1,
-\]
-
-where
-
-\[
-\Delta(D)=\max_{v\in V(D)}\{d^-(v)+d^+(v)\}.
-\]
-
-It also fixes one reference vertex to color 0 to break color-translation symmetry.
-
-## Big-M
-
-The implementation uses
-
-\[
-M=\left\lceil\frac{3}{2}\Delta(D)^2\right\rceil+1.
-\]
-
-Here \(\Delta(D)\) denotes the maximum total directed degree \(d^-(v)+d^+(v)\).
 
 ## Using the Solver on Another Digraph
 
@@ -187,7 +158,7 @@ Update the citation information once the associated paper has been published.
 
 ## License
 
-This project is released under the MIT License. See `LICENSE`.
+This project is released under the GNU License. See `LICENSE`.
 
 ## Author
 
